@@ -38,6 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
+                'comments',
             ),
             'menu_icon' => 'dashicons-store',
             'menu_positions' => 7,
@@ -71,6 +72,7 @@ function shoes_register_meta_boxes( $meta_boxes ) {
             [
                 'name' => 'Promoción',
                 'id'   => 'featured_shoes',
+                'desc' => 'Las promociones se mostraran en la página de inicio',
                 'type' => 'checkbox',
                 'std'  => 0, // 0 or 1
             ],
@@ -78,6 +80,7 @@ function shoes_register_meta_boxes( $meta_boxes ) {
                 'name'    => 'Tallas disponibles',
                 'id'      => 'shoes_sizes',
                 'type'    => 'checkbox_list',
+                'inline'  => true,
                 // Options of checkboxes, in format 'value' => 'Label'
                 'options' => array(
                     '20'    => '20',

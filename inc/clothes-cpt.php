@@ -38,6 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
+                'comments',
             ),
             'menu_icon' => 'dashicons-tag',
             'menu_positions' => 7,
@@ -71,6 +72,7 @@ function clothes_register_meta_boxes( $meta_boxes ) {
             [
                 'name' => 'Promoción',
                 'id'   => 'featured_clothes',
+                'desc' => 'Las promociones se mostraran en la página de inicio',
                 'type' => 'checkbox',
                 'std'  => 0, // 0 or 1
             ],
@@ -78,6 +80,7 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'name'    => 'Tallas disponibles',
                 'id'      => 'clothes_sizes',
                 'type'    => 'checkbox_list',
+                'inline'  => true,
                 // Options of checkboxes, in format 'value' => 'Label'
                 'options' => array(
                     'XS'    => 'Extra chica',

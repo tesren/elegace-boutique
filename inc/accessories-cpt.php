@@ -38,6 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
+                'comments',
             ),
             'menu_icon' => 'dashicons-superhero-alt',
             'menu_positions' => 7,
@@ -70,24 +71,11 @@ function accessories_register_meta_boxes( $meta_boxes ) {
             ],  
             [
                 'name' => 'Promoción',
+                'desc' => 'Las promociones se mostraran en la página de inicio',
                 'id'   => 'featured_accessory',
                 'type' => 'checkbox',
                 'std'  => 0, // 0 or 1
-            ],
-            [
-                'name'    => 'Tallas disponibles',
-                'id'      => 'clothes_sizes',
-                'type'    => 'checkbox_list',
-                // Options of checkboxes, in format 'value' => 'Label'
-                'options' => array(
-                    'XS'    => 'Extra chica',
-                    'S'     => 'Chica',
-                    'M'     => 'Mediana',
-                    'L'     => 'Grande',
-                    'XL'    => 'Extra grande',
-                ),
-                'select_all_none' => false,
-            ],            
+            ],         
             [
                 'id'               => 'accessory_gallery',
                 'name'             => 'Fotos del articulo',

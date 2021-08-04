@@ -89,7 +89,7 @@ $testimonials = get_posts(array(
                   <?php $cImages = rwmb_meta('image_clothes', array('size' => 'large', 'limit' => '1' ), $cloth->ID);?>
                     <img alt="<?php echo $cImages[0]['title'] ?>" src="<?php echo $cImages[0]['url']; ?>" class="img-fluid">
                     <div class="overlay">	
-                        <a href="#" class="buy-btn">Comprar</a>	
+                        <a href="<?php echo get_the_permalink($cloth->ID); ?>" class="buy-btn">Más Info</a>	
                     </div>
                 </div>
                 <div class="detail-box">
@@ -120,7 +120,7 @@ $testimonials = get_posts(array(
                   <?php $bImages = rwmb_meta('bikini_gallery', array('size' => 'large', 'limit' => '1' ), $bikini->ID);?>
                     <img alt="<?php echo $bImages[0]['title'] ?>" src="<?php echo $bImages[0]['url']; ?>" class="img-fluid">
                     <div class="overlay">	
-                        <a href="#" class="buy-btn">Comprar</a>	
+                        <a href="<?php echo get_the_permalink($bikini->ID); ?>" class="buy-btn">Más Info</a>	
                     </div>
                 </div>
                 <div class="detail-box">
@@ -151,7 +151,7 @@ $testimonials = get_posts(array(
                   <?php $aImages = rwmb_meta('accessory_gallery', array('size' => 'large', 'limit' => '1' ), $accesory->ID);?>
                     <img alt="<?php echo $aImages[0]['title'] ?>" src="<?php echo $aImages[0]['url']; ?>" class="img-fluid">
                     <div class="overlay">	
-                        <a href="#" class="buy-btn">Comprar</a>	
+                        <a href="<?php echo get_the_permalink($accesory->ID); ?>" class="buy-btn">Más Info</a>	
                     </div>
                 </div>
                 <div class="detail-box">
@@ -173,7 +173,7 @@ $testimonials = get_posts(array(
                   <?php $sImages = rwmb_meta('image_shoes', array('size' => 'large', 'limit' => '1' ), $shoe->ID);?>
                     <img alt="<?php echo $sImages[0]['title'] ?>" src="<?php echo $sImages[0]['url']; ?>" class="img-fluid">
                     <div class="overlay">	
-                        <a href="#" class="buy-btn">Comprar</a>	
+                        <a href="<?php echo get_the_permalink($shoe->ID);?>" class="buy-btn">Más Info</a>	
                     </div>
                 </div>
                 <div class="detail-box">
@@ -218,7 +218,7 @@ $testimonials = get_posts(array(
       <div class="row">
         <div class="promociones">
           <div class="b-titulo2 text-center">Elegance Boutique</div>
-          <div class="b-titulo1 text-center">Galeria</div>
+          <div class="b-titulo1 text-center">Categorías</div>
         </div>
       </div>
 
@@ -226,22 +226,28 @@ $testimonials = get_posts(array(
         
         <div class="col-md-4 p-5">
           <div class="cardbox">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/bolso.jpg';?>" class="img-fluid" alt="">
-            <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Accesorios</div></div>
+            <a href="/wordpress-boutique/accessories">
+              <img src="<?php echo get_template_directory_uri() .'/assets/images/bolso.jpg';?>" class="img-fluid img-cat" alt="">
+              <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Accesorios</div></div>
+            </a>
           </div>
         </div>
 
         <div class="col-md-4 p-5">
           <div class="cardbox">
-            <img src="<?php echo get_template_directory_uri() .'/assets/images/ropa.jpeg';?>" class="img-fluid" alt="">
-            <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Ropa</div></div>
+            <a href="/wordpress-boutique/clothes">
+              <img src="<?php echo get_template_directory_uri() .'/assets/images/ropa.jpeg';?>" class="img-fluid img-cat" alt="">
+              <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Ropa</div></div>
+            </a>
           </div>
         </div>
 
         <div class="col-md-4 p-5">
           <div class="cardbox">
-          <img src="<?php echo get_template_directory_uri() .'/assets/images/zapatos.jpg';?>" class="img-fluid" alt="">
-            <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Zapatos</div></div>
+            <a href="/wordpress-boutique/shoes">
+              <img src="<?php echo get_template_directory_uri() .'/assets/images/zapatos.jpg';?>" class="img-fluid img-cat" alt="">
+              <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Zapatos</div></div>
+            </a>
           </div>
         </div>
 

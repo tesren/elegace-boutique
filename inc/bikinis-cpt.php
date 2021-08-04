@@ -38,6 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
+                'comments',
             ),
             'menu_icon' => 'dashicons-palmtree',
             'menu_positions' => 7,
@@ -71,6 +72,7 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
             [
                 'name' => 'Promoción',
                 'id'   => 'featured_bikini',
+                'desc' => 'Las promociones se mostraran en la página de inicio',
                 'type' => 'checkbox',
                 'std'  => 0, // 0 or 1
             ],
@@ -78,6 +80,7 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
                 'name'    => 'Tallas disponobles',
                 'id'      => 'bikinis_sizes',
                 'type'    => 'checkbox_list',
+                'inline'  => true,
                 // Options of checkboxes, in format 'value' => 'Label'
                 'options' => array(
                     'XS'    => 'Extra chica',
@@ -95,7 +98,7 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
                 // Array of 'value' => 'Label' pairs
                 'options'         => array(
                     'Una pieza'             => 'Una pieza',
-                    'Dos piezas'            => 'Dos pieza',
+                    'Dos piezas'            => 'Dos piezas',
                     'Mas de dos piezas'     => 'Mas de dos piezas',
                 ),
                 // Allow to select multiple value?

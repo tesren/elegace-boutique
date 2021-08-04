@@ -9,17 +9,19 @@
                 <!-- Facebook -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="#!"
+                    href="https://www.facebook.com/boutique.elegance.mx"
                     role="button"
                     data-mdb-ripple-color="dark"
+                    target="_blank"
                     ><i class="fab fa-facebook-f fill-brown"></i
                 ></a>
                 <!-- Instagram -->
                 <a
                     class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="#!"
+                    href="https://www.instagram.com/eleganceboutique.mx/"
                     role="button"
                     data-mdb-ripple-color="dark"
+                    target="_blank"
                     ><i class="fab fa-instagram fill-brown"></i
                 ></a>
                 <!-- Whastapp -->
@@ -28,6 +30,7 @@
                     href="#!"
                     role="button"
                     data-mdb-ripple-color="dark"
+                    target="_blank"
                     ><i class="fab fa-whatsapp fill-brown"></i>
                 </a>
                 </section>
