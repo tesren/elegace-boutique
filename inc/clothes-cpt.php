@@ -38,7 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
-                'comments',
+                //'comments',
             ),
             'menu_icon' => 'dashicons-tag',
             'menu_positions' => 7,
@@ -81,6 +81,7 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'id'      => 'clothes_sizes',
                 'type'    => 'checkbox_list',
                 'inline'  => true,
+                'required'=> true,
                 // Options of checkboxes, in format 'value' => 'Label'
                 'options' => array(
                     'XS'    => 'Extra chica',
@@ -90,11 +91,43 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                     'XL'    => 'Extra grande',
                 ),
                 'select_all_none' => false,
+            ],
+            [
+                'name' => 'Material',
+                'id'   => 'material',
+                'type' => 'text',
+                'desc' => 'Especifique de que material o materiales está hecho el artículo',
+            ],
+            [
+                'name' => 'Marca',
+                'id'   => 'brand',
+                'type' => 'text',
+                'desc' => 'Opcional',
+            ],
+            [
+                'name' => 'Color',
+                'id'   => 'color',
+                'type' => 'text',
+                'desc' => 'Especifique el color del artículo',
+            ],
+            [
+                'name'    => 'Envíos',
+                'id'      => 'delivery',
+                'type'    => 'checkbox_list',
+                'inline'  => true,
+                // Options of checkboxes, in format 'value' => 'Label'
+                'options' => array(
+                    'Locales'        => 'Locales',
+                    'Nacionales'     => 'Nacionales',
+                    'Internacionales'=> 'Internacionales',
+                ),
+                'select_all_none' => false,
             ],            
             [
                 'id'               => 'image_clothes',
                 'name'             => 'Fotos del articulo',
                 'type'             => 'image_upload',
+                'required'=> true,
             
                 // Delete file from Media Library when remove it from post meta?
                 // Note: it might affect other posts if you use same file for multiple posts

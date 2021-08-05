@@ -38,7 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
-                'comments',
+                //'comments',
             ),
             'menu_icon' => 'dashicons-superhero-alt',
             'menu_positions' => 7,
@@ -75,11 +75,43 @@ function accessories_register_meta_boxes( $meta_boxes ) {
                 'id'   => 'featured_accessory',
                 'type' => 'checkbox',
                 'std'  => 0, // 0 or 1
-            ],         
+            ],
+            [
+                'name' => 'Material',
+                'id'   => 'material',
+                'type' => 'text',
+                'desc' => 'Especifique de que material o materiales está hecho el artículo',
+            ],
+            [
+                'name' => 'Marca',
+                'id'   => 'brand',
+                'type' => 'text',
+                'desc' => 'Opcional',
+            ],
+            [
+                'name' => 'Color',
+                'id'   => 'color',
+                'type' => 'text',
+                'desc' => 'Especifique el color del artículo',
+            ],
+            [
+                'name'    => 'Envíos',
+                'id'      => 'delivery',
+                'type'    => 'checkbox_list',
+                'inline'  => true,
+                // Options of checkboxes, in format 'value' => 'Label'
+                'options' => array(
+                    'Locales'        => 'Locales',
+                    'Nacionales'     => 'Nacionales',
+                    'Internacionales'=> 'Internacionales',
+                ),
+                'select_all_none' => false,
+            ],                    
             [
                 'id'               => 'accessory_gallery',
                 'name'             => 'Fotos del articulo',
                 'type'             => 'image_upload',
+                'required'         => true,
             
                 // Delete file from Media Library when remove it from post meta?
                 // Note: it might affect other posts if you use same file for multiple posts

@@ -14,17 +14,18 @@ add_action('after_setup_theme', 'v4you_theme_support');
 
 //ENABLE MENU FUNCTION
 
-function cb_menus()
+function boutique_menus()
 {    
     $locations = array(
-        'primary' => "Desktop primary left sidebar",
+        'primary' => __( 'Primary Menu', 'boutique' ),
+        'pre-header' => __('Pre Header Menu', 'boutique'),
         'footer' => "Footer menu Items",
     );
     
     register_nav_menus( $locations );
 }
 
-add_action('init', 'cb_menus');
+add_action('init', 'boutique_menus');
 
 
 
@@ -85,14 +86,18 @@ function os_async_scripts($url)
 add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
 
 
-/*
-		==========================================
+/*      ==========================================
 			INCLUDE WALKER FILTER
 		==========================================
 
 	*/
-
-	require get_template_directory() . '/inc/walker-header.php';
+    /**
+     * Register Custom Navigation Walker
+     */
+    function register_navwalker(){
+        require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';
+    }
+    add_action( 'after_setup_theme', 'register_navwalker' );
 
      /**
      * Register Custom Comments Walker
@@ -245,4 +250,15 @@ add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
     require get_template_directory() . '/inc/clothes-cpt.php';
 
     require get_template_directory() . '/inc/accessories-cpt.php';
+
+    function check_post_type_and_remove_media_buttons() {
+        global $current_screen;
+        // Replace following array items with your own custom post types
+        $post_types = array('bikinis','clothes', 'accessories', 'testimonials', 'shoes');
+        if (in_array($current_screen->post_type,$post_types)) {
+        remove_action('media_buttons', 'media_buttons');
+        }
+    }
+
+    add_action('admin_head','check_post_type_and_remove_media_buttons');
 ?>

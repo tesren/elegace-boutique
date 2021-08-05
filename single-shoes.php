@@ -40,8 +40,22 @@
 
                         <div class="col-md-5">
                             <h1 class="my-3" style="color:#937b6f;"><?php the_title();?></h1>
-                            <span class="fw-bold fs-4 d-block">$<?php echo number_format(rwmb_meta('price')); ?></span>
-                            <span class="fs-5 mt-3 d-block">Tallas disponibles: 
+                            <span class="fw-bold fs-4 d-block">MXN $<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                            <?php $envios = rwmb_meta('delivery');
+                            if(!empty($envios)): ?>
+                                <span class="fs-5 mt-3 d-block"><i class="fas fa-shipping-fast"></i> Envíos:
+                                    <?php $j=0;
+                                    foreach($envios as $envio): ?>
+                                        <strong>
+                                            <?php if($j==1 || $j==2){echo ", ".$envio;} else{echo $envio;} ?>
+                                        </strong>
+                                    <?php $j++; 
+                                    endforeach ?>
+                                </span>
+                            <?php endif; ?>
+
+                            <span class="fs-5 mt-3 d-block"><i class="fas fa-tags"></i> Tallas disponibles: 
                                 <strong>
                                     <?php $tallas = rwmb_meta('shoes_sizes');
                                     foreach($tallas as $talla){
@@ -49,15 +63,57 @@
                                     }?>
                                 </strong>
                             </span>
+                            <?php if(!empty(rwmb_meta('material'))): ?>
+                                <span class="fs-5 mt-3 d-block"><i class="fas fa-tshirt"></i> Material: <strong><?php echo rwmb_meta('material'); ?></strong></span>
+                            <?php endif; ?>
+
+                            <?php if(!empty(rwmb_meta('color'))): ?>
+                                <span class="fs-5 mt-3 d-block"><i class="fas fa-palette"></i> Color: <strong><?php echo rwmb_meta('color'); ?></strong></span>
+                            <?php endif; ?>
+
+                            <?php if(!empty(rwmb_meta('brand'))): ?>
+                                <span class="fs-5 mt-3 d-block">Marca: <strong><?php echo rwmb_meta('brand'); ?></strong></span>
+                            <?php endif; ?>
+
                             <div class="fs-5 mt-4"><?php echo the_content(); ?></div>
+                            
+                            <?php $text = " Hola me interesa este artículo"; ?>
+                            <a href="https://wa.me/523221084847?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank">Me Interesa</a>
                         </div>
 
 
                     </div>
 
-                    <div class="row justify-content-center text-center mt-5">
-                        <?php comments_template(); ?>
-                    </div>
+                 <!--    <div class="row justify-content-center text-center mt-5">
+                        <?php //comments_template(); ?>
+                    </div> -->
+
+                    <?php 
+                    $title = get_the_title();
+                    $permalink = get_the_permalink();
+                    $twitterHandler = ( get_option('twitter_handler') ? '&amp;via='.esc_attr( get_option('twitter_handler') ) : '' );
+
+                    $twitter = 'https://twitter.com/intent/tweet?text=Vean este artículo: ' . $title . '&amp;url=' . $permalink . $twitterHandler .'';
+                    $facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . $permalink;
+                    $whatsapp = 'https://api.whatsapp.com/send?text='. $permalink;
+                ?>
+
+                    <aside class="social-media">
+                    
+                        <a href="<?php echo $facebook ?>" class="s-item facebook" target="_blank">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+                        
+                        <a href="<?php echo $twitter ?>" class="s-item twitter" target="_blank">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                        
+
+                        <a href="<?php echo $whatsapp ?>" class="s-item gplus" target="_blank" data-action="share/whatsapp/share">
+                            <span class="fab fa-whatsapp"></span>
+                        </a>
+
+                    </aside>
 
                 </div>
 

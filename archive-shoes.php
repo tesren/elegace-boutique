@@ -6,7 +6,7 @@
             $i = 1;
             ?>
         <div class="row justify-content-evenly">
-            <h1 class="text-center my-5">Toda la Ropa </h1>
+            <h1 class="text-center my-5">Todo el calzado </h1>
             <?php while( have_posts()):  the_post();?>
 
             <div class="col-md-3">

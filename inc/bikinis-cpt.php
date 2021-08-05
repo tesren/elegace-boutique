@@ -38,7 +38,7 @@
                 //'excerpt',
                 //'thumbnail',
                 'revisions',
-                'comments',
+                //'comments',
             ),
             'menu_icon' => 'dashicons-palmtree',
             'menu_positions' => 7,
@@ -77,10 +77,11 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
                 'std'  => 0, // 0 or 1
             ],
             [
-                'name'    => 'Tallas disponobles',
+                'name'    => 'Tallas disponibles',
                 'id'      => 'bikinis_sizes',
                 'type'    => 'checkbox_list',
                 'inline'  => true,
+                'required'         => true,
                 // Options of checkboxes, in format 'value' => 'Label'
                 'options' => array(
                     'XS'    => 'Extra chica',
@@ -95,11 +96,12 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
                 'name'            => 'Piezas',
                 'id'              => 'bikini_pieces',
                 'type'            => 'select',
+                'required'         => true,
                 // Array of 'value' => 'Label' pairs
                 'options'         => array(
-                    'Una pieza'             => 'Una pieza',
-                    'Dos piezas'            => 'Dos piezas',
-                    'Mas de dos piezas'     => 'Mas de dos piezas',
+                    '1 pieza'             => '1 pieza',
+                    '2 piezas'            => '2 piezas',
+                    'Mas de 2 piezas'     => 'Mas de 2 piezas',
                 ),
                 // Allow to select multiple value?
                 'multiple'        => false,
@@ -108,11 +110,42 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
                 // Display "Select All / None" button?
                 'select_all_none' => false,
             ],
-                        
+            [
+                'name' => 'Material',
+                'id'   => 'material',
+                'type' => 'text',
+                'desc' => 'Especifique de que material o materiales está hecho el artículo',
+            ],
+            [
+                'name' => 'Color',
+                'id'   => 'color',
+                'type' => 'text',
+                'desc' => 'Especifique el color del artículo',
+            ],
+            [
+                'name' => 'Marca',
+                'id'   => 'brand',
+                'type' => 'text',
+                'desc' => 'Opcional',
+            ],
+            [
+                'name'    => 'Envíos',
+                'id'      => 'delivery',
+                'type'    => 'checkbox_list',
+                'inline'  => true,
+                // Options of checkboxes, in format 'value' => 'Label'
+                'options' => array(
+                    'Locales'        => 'Locales',
+                    'Nacionales'     => 'Nacionales',
+                    'Internacionales'=> 'Internacionales',
+                ),
+                'select_all_none' => false,
+            ],               
             [
                 'id'               => 'bikini_gallery',
                 'name'             => 'Fotos del bikini',
                 'type'             => 'image_upload',
+                'required'         => true,
             
                 // Delete file from Media Library when remove it from post meta?
                 // Note: it might affect other posts if you use same file for multiple posts

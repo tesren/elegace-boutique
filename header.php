@@ -30,28 +30,41 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end p-5 pt-0 pb-0" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <?php
+                      wp_nav_menu( array(
+                          'theme_location'    => 'primary',
+                          'depth'             => 2,
+                          'container'         => 'div',
+                          'container_class'   => 'collapse navbar-collapse justify-content-end p-5 pt-0 pb-0',
+                          'container_id'      => 'navbarSupportedContent',
+                          'menu_class'        => 'navbar-nav ms-auto',
+                          'menu_id'           => 'boutique_navbar',
+                          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                          'walker'            => new WP_Bootstrap_Navwalker(),
+                      ) );
+                      ?>
+        
+        <!-- <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/wordpress-boutique/clothes">Ropa</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/clothes">Ropa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/wordpress-boutique/accessories">Accesorios</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/accessories">Accesorios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/wordpress-boutique/bikinis">Trajes de baño</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/bikinis">Trajes de baño</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/wordpress-boutique/shoes">Calzado</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/shoes">Calzado</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/wordpress-boutique#boutiqueContactForm">Contacto</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>#boutiqueContactForm">Contacto</a>
           </li>
-        </ul>
-      </div>
+        </ul> -->
+      
     </nav>
 
     </header>

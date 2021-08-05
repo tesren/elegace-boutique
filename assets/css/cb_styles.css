@@ -1,3 +1,4 @@
+/*Estilos generales*/
 *{
     font-family: 'Montserrat', sans-serif;
 }
@@ -10,6 +11,26 @@ body{
     font-weight: bolder;
     margin-left: 3rem;
 }
+.nav-link{
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.nav-link:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+a[aria-current="page"]{
+    color: rgba(0, 0, 0, 1) !important;
+    text-decoration: underline;
+}
+
+a[title="Contacto"]{
+    color: rgba(0, 0, 0, .55) !important;
+    text-decoration: none;
+}
+
 a{
     text-decoration: none;
 }
@@ -65,6 +86,27 @@ h1{
     width: 90%;
 }
 
+.social-media{
+    position: fixed;
+    left: 0;
+    top: 40%;
+}
+
+.s-item {
+    display:block;
+    width: 40px;
+    height: 50px;
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    text-align: center;
+
+    transition:all linear 0.2s ;
+}
+
+.facebook:hover{color: #305891;}
+.twitter:hover{color: #3AAFD6;}
+.gplus:hover{color: #25D366; }
 
 /*SLIDER*/
 
@@ -101,6 +143,7 @@ h1{
 /*PRODUCTS SLIDER*/
 .box{
 	width:300px;
+    height: 530px;
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
 	overflow: hidden;
 	margin: 25px;
@@ -190,15 +233,6 @@ display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-
-
-
-
-
-
-
-
 
 .b-titulo2{
     font-size: 1rem;

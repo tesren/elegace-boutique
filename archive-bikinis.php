@@ -6,7 +6,7 @@
             $i = 1;
             ?>
         <div class="row justify-content-evenly">
-            <h1 class="text-center my-5">Todos los Bikinis </h1>
+            <h1 class="text-center my-5">Todos los Trajes de baño </h1>
             <?php while( have_posts()):  the_post();?>
 
             <div class="col-md-3">
@@ -24,7 +24,7 @@
                             <span> 
                             TALLAS:
                                 <strong> 
-                                <?php $tallas = rwmb_meta('bikini_sizes');
+                                <?php $tallas = rwmb_meta('bikinis_sizes');
                                 foreach($tallas as $talla):
                                     echo $talla." ";
                                 endforeach;?>

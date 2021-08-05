@@ -35,7 +35,7 @@ function v4you_save_contact(){
     if( $postID !== 0 ){
 
         //$to = get_bloginfo('admin_email');
-        $to = 'info@oceansingerlacruz.com';
+        $to = 'erick@punto401.com';
 
         $subject = 'Contact Email Ocean Singer La Cruz - '. $title;
 
