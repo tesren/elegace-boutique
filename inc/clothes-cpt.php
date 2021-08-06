@@ -127,7 +127,7 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'id'               => 'image_clothes',
                 'name'             => 'Fotos del articulo',
                 'type'             => 'image_upload',
-                'required'=> true,
+                
             
                 // Delete file from Media Library when remove it from post meta?
                 // Note: it might affect other posts if you use same file for multiple posts

@@ -85,15 +85,25 @@ function shoes_register_meta_boxes( $meta_boxes ) {
                 // Options of checkboxes, in format 'value' => 'Label'
                 'options' => array(
                     '20'    => '20',
+                    '20.5'    => '20.5',
                     '21'     => '21',
+                    '21.5'     => '21.5',
                     '22'     => '22',
+                    '22.5'     => '22.5',
                     '23'     => '23',
+                    '23.5'     => '23.5',
                     '24'    => '24',
+                    '24.5'    => '24.5',
                     '25'    => '25',
+                    '25.5'    => '25.5',
                     '26'     => '26',
+                    '26.5'     => '26.5',
                     '27'     => '27',
+                    '27.5'     => '27.5',
                     '28'     => '28',
+                    '28.5'     => '28.5',
                     '29'    => '29',
+                    '29.5'    => '29.5',
                     '30'    => '30',
                 ),
                 'select_all_none' => false,
@@ -133,7 +143,7 @@ function shoes_register_meta_boxes( $meta_boxes ) {
                 'id'               => 'image_shoes',
                 'name'             => 'Fotos de los zapatos',
                 'type'             => 'image_upload',
-                'required'         => true,
+                
             
                 // Delete file from Media Library when remove it from post meta?
                 // Note: it might affect other posts if you use same file for multiple posts

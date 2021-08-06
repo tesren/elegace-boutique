@@ -7,6 +7,7 @@ function v4you_theme_support()
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
     add_theme_support( 'custom-header' );
+    add_theme_support( 'widgets' );
     add_theme_support('html5', array('comment-list', 'comment-form') );
 }
 

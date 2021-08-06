@@ -111,7 +111,7 @@ function accessories_register_meta_boxes( $meta_boxes ) {
                 'id'               => 'accessory_gallery',
                 'name'             => 'Fotos del articulo',
                 'type'             => 'image_upload',
-                'required'         => true,
+                
             
                 // Delete file from Media Library when remove it from post meta?
                 // Note: it might affect other posts if you use same file for multiple posts

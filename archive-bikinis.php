@@ -21,15 +21,6 @@
                     <div class="detail-box">
                         <div class="type">
                             <a href="#"><?php echo get_the_title(); ?></a>
-                            <span> 
-                            TALLAS:
-                                <strong> 
-                                <?php $tallas = rwmb_meta('bikinis_sizes');
-                                foreach($tallas as $talla):
-                                    echo $talla." ";
-                                endforeach;?>
-                                </strong>
-                            </span>
                         </div>
                         <a href="#" class="price">$<?php echo number_format(rwmb_meta('price')); ?></a>
                     </div>
