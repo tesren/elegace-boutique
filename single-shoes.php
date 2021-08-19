@@ -78,7 +78,7 @@
                             <div class="fs-5 mt-4"><?php echo the_content(); ?></div>
                             
                             <?php $text = " Hola me interesa este artículo"; ?>
-                            <a href="https://wa.me/523221084847?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank">Me Interesa</a>
+                            <a href="https://wa.me/523225555555?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank">Me Interesa</a>
                         </div>
 
 

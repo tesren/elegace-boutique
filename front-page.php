@@ -50,7 +50,7 @@ $testimonials = get_posts(array(
   'numberposts' => -1,
 ));?>
 
-<div class="d-flex justify-content-center align-items-center bg-image" style="background-image: url('<?php echo get_template_directory_uri() .'/assets/images/cover01.jpeg';?>');
+<div class="d-flex justify-content-center align-items-center bg-image" style="background-image: url('<?php echo get_template_directory_uri().'/assets/images/cover01.jpeg';?>');
   background-position: center;
     background-size: cover; height: 90vh;">
       <div class="mask">
@@ -88,6 +88,9 @@ $testimonials = get_posts(array(
                 <div class="slide-img">
                   <?php $cImages = rwmb_meta('image_clothes', array('size' => 'large', 'limit' => '1' ), $cloth->ID);?>
                     <img alt="<?php echo $cImages[0]['title'] ?>" src="<?php echo $cImages[0]['url']; ?>" loading="lazy" class="img-fluid">
+                    <?php $fecha_alta = get_the_date('Y-m-d H:i:s');
+                    //if($fecha_alta):?>
+                    <!-- <span class="new-tag px-2">Nuevo</span> -->
                     <div class="overlay">	
                         <a href="<?php echo get_the_permalink($cloth->ID); ?>" class="buy-btn">Más Info</a>	
                     </div>
@@ -199,7 +202,7 @@ $testimonials = get_posts(array(
         
         <div class="col-md-4 p-3 p-lg-5">
           <div class="cardbox">
-            <a href="/wordpress-boutique/accessories">
+            <a href="<?php echo get_home_url(); ?>/accessories">
               <img src="<?php echo get_template_directory_uri() .'/assets/images/bolso.jpg';?>" class="img-fluid img-cat" loading="lazy" alt="">
               <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Accesorios</div></div>
             </a>
@@ -208,7 +211,7 @@ $testimonials = get_posts(array(
 
         <div class="col-md-4 p-3 p-lg-5">
           <div class="cardbox">
-            <a href="/wordpress-boutique/clothes">
+            <a href="<?php echo get_home_url(); ?>/clothes">
               <img src="<?php echo get_template_directory_uri() .'/assets/images/ropa.jpeg';?>" loading="lazy" class="img-fluid img-cat" alt="">
               <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Ropa</div></div>
             </a>
@@ -217,7 +220,7 @@ $testimonials = get_posts(array(
 
         <div class="col-md-4 p-3 p-lg-5">
           <div class="cardbox">
-            <a href="/wordpress-boutique/shoes">
+            <a href="<?php echo get_home_url(); ?>/shoes">
               <img src="<?php echo get_template_directory_uri() .'/assets/images/zapatos.jpg';?>" loading="lazy" class="img-fluid img-cat" alt="">
               <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Zapatos</div></div>
             </a>
@@ -247,11 +250,11 @@ $testimonials = get_posts(array(
 
     <!--MAPA-->
 
-    <div class="mt-5">
+    <div class="mt-5 mb-2">
       <div class="row">
         <div class="promociones">
           <div class="b-titulo2 text-center">Puerto Vallarta</div>
-          <div class="b-titulo1 text-center">SUCURSALES</div>
+          <div class="b-titulo1 text-center">Sucursal Plaza Caracol</div>
         </div>
       </div>
     </div>
@@ -259,6 +262,20 @@ $testimonials = get_posts(array(
     <div style="height: 50vh;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.4256034943534!2d-105.23363847077192!3d20.6409831991381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145ee10f1ee11%3A0x3aaafc9b1a5fcaaa!2sBoutique%20Elegance%20Plaza%20Caracol!5e0!3m2!1ses-419!2smx!4v1628281295228!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+
+    <div class="mt-5 mb-2">
+      <div class="row">
+        <div class="promociones">
+          <div class="b-titulo2 text-center">Puerto Vallarta</div>
+          <div class="b-titulo1 text-center">Sucursal Parota Center</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50vh;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.4388397668572!2d-105.22156489153235!3d20.63882622920495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145a8a62da707%3A0x7e53903753494db2!2sParota%20Center!5e0!3m2!1ses-419!2smx!4v1628532551345!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
 
     <!--TESTIMONOIOS-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -334,8 +351,9 @@ $testimonials = get_posts(array(
           <p><strong>Sucursal Plaza Parota</strong><br>Av. Francisco Medina Ascencio, Las Glorias, 48333 Puerto Vallarta, Jal.</p>
 
           <div class="d-flex align-items-center pb-3 margin-top-2"><i class="fas fa-phone mr-1 fa-2x"></i><p>322 2255 531</p></div>
+          <div class="d-flex align-items-center pb-3"><i class="fas fa-phone mr-1 fa-2x"></i><p>322 1165 360</p></div>
           <div class="d-flex align-items-center pb-3"><i class="fas fa-envelope mr-1 fa-2x"></i><p>Info.boutique@gmail.com</p></div>
-          <div class="d-flex align-items-center pb-3"><i class="fab fa-whatsapp mr-1 fa-2x"></i><p>322 1165 360</p></div>
+          
         </div>
 
         <div class="col-11 col-md-6">

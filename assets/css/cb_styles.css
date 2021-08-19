@@ -153,6 +153,15 @@ h1{
 	overflow: hidden;
 	margin: 25px;
 }
+
+.new-tag{
+ position: absolute;
+ left: 10px;
+ top: 10px;
+ background-color: #937b6f;
+ color: #FFF;
+}
+
 .slide-img{
 	height: 450px;
 	position:relative;
@@ -164,7 +173,7 @@ h1{
 }
 .detail-box{
 	width: 100%;
-display: flex;
+    display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 20px;
@@ -288,7 +297,7 @@ display: flex;
 }
 /*INSTAGRAM*/
 .instagram{
-    background-image: url('http://boutique.punto401.com/wp-content/themes/boutique/assets/images/cover1.jpg');
+    background-image: url('https://eleganceboutiquemx.com/wp-content/themes/boutique/assets/images/cover1.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -336,7 +345,7 @@ display: flex;
   }
   
   .one {
-    background-image: url('http://boutique.punto401.com/wp-content/themes/boutique/assets/images/testimonio.jpg');
+    background-image: url('https://eleganceboutiquemx.com/wp-content/themes/boutique/assets/images/testimonio.jpg');
   }
 /*FORMULARIO*/
 .bg-gris{
