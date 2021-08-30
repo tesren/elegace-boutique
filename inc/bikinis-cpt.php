@@ -142,7 +142,7 @@ function bikinis_register_meta_boxes( $meta_boxes ) {
                 'select_all_none' => false,
             ],               
             [
-                'id'               => 'bikini_gallery',
+                'id'               => 'article_gallery',
                 'name'             => 'Fotos del bikini',
                 'type'             => 'image_upload',
                 

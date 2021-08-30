@@ -43,27 +43,7 @@
                           'walker'            => new WP_Bootstrap_Navwalker(),
                       ) );
                       ?>
-        
-        <!-- <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/clothes">Ropa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/accessories">Accesorios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/bikinis">Trajes de baño</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/shoes">Calzado</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>#boutiqueContactForm">Contacto</a>
-          </li>
-        </ul> -->
+      <div class="d-none d-md-block"><?php get_search_form(); ?></div>
       
     </nav>
 

@@ -140,7 +140,7 @@ function shoes_register_meta_boxes( $meta_boxes ) {
                 'select_all_none' => false,
             ],                
             [
-                'id'               => 'image_shoes',
+                'id'               => 'article_gallery',
                 'name'             => 'Fotos de los zapatos',
                 'type'             => 'image_upload',
                 

@@ -124,7 +124,7 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'select_all_none' => false,
             ],            
             [
-                'id'               => 'image_clothes',
+                'id'               => 'article_gallery',
                 'name'             => 'Fotos del articulo',
                 'type'             => 'image_upload',
                 

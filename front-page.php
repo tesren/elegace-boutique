@@ -86,7 +86,7 @@ $testimonials = get_posts(array(
             <li class="item-a">
               <div class="box">
                 <div class="slide-img">
-                  <?php $cImages = rwmb_meta('image_clothes', array('size' => 'large', 'limit' => '1' ), $cloth->ID);?>
+                  <?php $cImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), $cloth->ID);?>
                     <img alt="<?php echo $cImages[0]['title'] ?>" src="<?php echo $cImages[0]['url']; ?>" loading="lazy" class="img-fluid">
                     <?php $fecha_alta = get_the_date('Y-m-d H:i:s');
                     //if($fecha_alta):?>
@@ -111,7 +111,7 @@ $testimonials = get_posts(array(
             <li class="item-b">
               <div class="box">
                 <div class="slide-img">
-                  <?php $bImages = rwmb_meta('bikini_gallery', array('size' => 'large', 'limit' => '1' ), $bikini->ID);?>
+                  <?php $bImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), $bikini->ID);?>
                     <img alt="<?php echo $bImages[0]['title'] ?>" src="<?php echo $bImages[0]['url']; ?>" loading="lazy" class="img-fluid">
                     <div class="overlay">	
                         <a href="<?php echo get_the_permalink($bikini->ID); ?>" class="buy-btn">Más Info</a>	
@@ -133,7 +133,7 @@ $testimonials = get_posts(array(
             <li class="item-c">
               <div class="box">
                 <div class="slide-img">
-                  <?php $aImages = rwmb_meta('accessory_gallery', array('size' => 'large', 'limit' => '1' ), $accesory->ID);?>
+                  <?php $aImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), $accesory->ID);?>
                     <img alt="<?php echo $aImages[0]['title'] ?>" src="<?php echo $aImages[0]['url']; ?>" loading="lazy" class="img-fluid">
                     <div class="overlay">	
                         <a href="<?php echo get_the_permalink($accesory->ID); ?>" class="buy-btn">Más Info</a>	
@@ -155,7 +155,7 @@ $testimonials = get_posts(array(
             <li class="item-b">
               <div class="box">
                 <div class="slide-img">
-                  <?php $sImages = rwmb_meta('image_shoes', array('size' => 'large', 'limit' => '1' ), $shoe->ID);?>
+                  <?php $sImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), $shoe->ID);?>
                     <img loading="lazy" alt="<?php echo $sImages[0]['title'] ?>" src="<?php echo $sImages[0]['url']; ?>" class="img-fluid">
                     <div class="overlay">	
                         <a href="<?php echo get_the_permalink($shoe->ID);?>" class="buy-btn">Más Info</a>	
@@ -177,16 +177,16 @@ $testimonials = get_posts(array(
     </section>
 
     <script>
-    // JavaScript Document
-    $(document).ready(function() {
-    $('#autoWidth').lightSlider({
-    autoWidth:true,
-    loop:true,
-    onSliderLoad: function() {
-        $('#autoWidth').removeClass('cS-hidden');
-    } 
-    });  
-    });
+      // JavaScript Document
+      $(document).ready(function() {
+      $('#autoWidth').lightSlider({
+      autoWidth:true,
+      loop:true,
+      onSliderLoad: function() {
+          $('#autoWidth').removeClass('cS-hidden');
+      } 
+      });  
+      });
     </script>
 
     <!--GALERIA-->
@@ -339,7 +339,7 @@ $testimonials = get_posts(array(
 
     </div>
 
-    <!--FORMULARIO-->
+    <!--Info de contacto-->
     <div class="bg-gris mt-5 p-4 pt-5 pb-5 p-md-5">
       <div class="row justify-content-center">
         <div class="col-10 col-md-6 mt-0 mt-md-4">
@@ -356,32 +356,12 @@ $testimonials = get_posts(array(
           
         </div>
 
+        <!--formulario de contacto-->
         <div class="col-11 col-md-6">
 
           <div class="b-titulo1 text-center mt-4 mt-lg-1">CONTACTO</div>
 
-          <form id="boutiqueContactForm" action="<?php echo '' ?>" method="POST" data-url="<?php echo admin_url('admin-ajax.php');?>">
-            <div class="form-group">
-              <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Nombre">
-            </div>
-
-            <div class="form-group">
-              <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="Correo electronico">
-            </div>
-
-            <div class="form-group">
-              <input type="text" class="form-control" id="exampleFormControlInput1" name="subject" placeholder="Asunto">
-            </div>
-
-            <div class="form-group">
-              <textarea class="form-control" id="exampleFormControlTextarea1" name = "message" placeholder="Mensaje" rows="3"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-outline-secondary btn-lg btn-block w-100">Enviar</button>
-            </div>
-            
-          </form>
-
+          <?php echo do_shortcode( '[contact-form-7 id="31" title="Formulario de contacto 1"]', true ) ?>
 
         </div>
       </div>

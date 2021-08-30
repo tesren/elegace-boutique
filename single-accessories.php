@@ -13,7 +13,7 @@
 
                         <div class="col-md-7">
 
-                            <?php $images = rwmb_meta('accessory_gallery', array( 'size' => 'full' ));?>
+                            <?php $images = rwmb_meta('article_gallery', array( 'size' => 'full' ));?>
 
                             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">

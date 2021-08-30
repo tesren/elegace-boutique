@@ -12,7 +12,7 @@
             <div class="col-md-3">
                 <div class="box">
                     <div class="slide-img">
-                    <?php $sImages = rwmb_meta('image_shoes', array('size' => 'large', 'limit' => '1' ), get_the_ID() );?>
+                    <?php $sImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), get_the_ID() );?>
                         <img alt="<?php echo $sImages[0]['title'] ?>" src="<?php echo $sImages[0]['url']; ?>" class="img-fluid">
                         <div class="overlay">	
                             <a href="<?php echo get_the_permalink(); ?>" class="buy-btn">Más Info</a>	

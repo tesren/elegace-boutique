@@ -358,12 +358,32 @@ h1{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.form-control{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-radius: 0rem;
     border-color: #2e2e2e;
+    width: 100%;
 }
+
+.wpcf7-submit{
+    background-color:#937b6f;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 0px;
+    border-radius: 0px;
+    font-weight: initial;
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.wpcf7-form label{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
 .bg-gris p{
     font-size: 1.2rem;
     margin: 0px;
@@ -371,6 +391,13 @@ h1{
 .margin-top-2{
     margin-top: 2rem;
 }
+
+/*Search form*/
+#searchform{
+    width: 150px;
+}
+
+
 @media (min-width: 1024px) {
     .bg-gris p{
         font-size: 1.5rem;
@@ -381,4 +408,12 @@ h1{
 /*FOOTER*/
 .fill-brown{
     color: #937b6f;
+}
+
+@media (max-width: 768px){
+
+    /*Search form*/
+    #searchform{
+        width: 100%;
+    }
 }
