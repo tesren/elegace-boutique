@@ -43,7 +43,7 @@
                           'walker'            => new WP_Bootstrap_Navwalker(),
                       ) );
                       ?>
-      <div class="d-none d-md-block"><?php get_search_form(); ?></div>
+      <div class="d-none d-lg-block"><?php get_search_form(); ?></div>
       
     </nav>
 

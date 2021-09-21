@@ -67,7 +67,7 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'name' => 'Precio',
                 'id'   => 'price',
                 'type' => 'number',
-                'required'=> true,
+                'required'=> false,
             ],  
             [
                 'name' => 'Promoción',

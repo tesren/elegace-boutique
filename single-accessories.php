@@ -11,7 +11,7 @@
 
                     <div class="row">
 
-                        <div class="col-md-7">
+                        <div class="col-lg-7">
 
                             <?php $images = rwmb_meta('article_gallery', array( 'size' => 'full' ));?>
 
@@ -38,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-lg-5 px-4 px-lg-3">
                             <h1 class="my-3" style="color:#937b6f;"><?php the_title();?></h1>
                             <span class="fw-bold fs-4 d-block">MXN $<?php echo number_format(rwmb_meta('price')); ?></span>
 

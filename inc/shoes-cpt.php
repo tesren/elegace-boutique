@@ -67,7 +67,7 @@ function shoes_register_meta_boxes( $meta_boxes ) {
                 'name' => 'Precio',
                 'id'   => 'price',
                 'type' => 'number',
-                'required'=> true,
+                'required'=> false,
             ],            
             [
                 'name' => 'Promoción',
@@ -120,6 +120,13 @@ function shoes_register_meta_boxes( $meta_boxes ) {
                 'type' => 'text',
                 'desc' => 'Opcional',
             ],
+            /* [
+                'name' => 'En existencia',
+                'id'   => 'exists',
+                'desc' => 'Cuando la casilla esté desmarcada, el artículo no se mostrará en el sitio web',
+                'type' => 'checkbox',
+                'std'  => 0, // 0 or 1
+            ], */
             [
                 'name' => 'Color',
                 'id'   => 'color',

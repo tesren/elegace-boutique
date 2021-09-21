@@ -50,9 +50,20 @@ $testimonials = get_posts(array(
   'numberposts' => -1,
 ));?>
 
-<div class="d-flex justify-content-center align-items-center bg-image" style="background-image: url('<?php echo get_template_directory_uri().'/assets/images/cover01.jpeg';?>');
-  background-position: center;
-    background-size: cover; height: 90vh;">
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner p-0">
+    <div class="carousel-item active">
+      <img src="<?php echo get_template_directory_uri().'/assets/images/cover01.jpeg';?>" class="d-block w-100" alt="landing">
+    </div>
+    <div class="carousel-item">
+      <img src="<?php echo get_template_directory_uri().'/assets/images/cover-2.jpg';?>" class="d-block w-100" alt="landing 2">
+    </div>
+    <div class="carousel-item">
+      <img src="<?php echo get_template_directory_uri().'/assets/images/cover-3.jpg';?>" class="d-block w-100" alt="landing 2">
+    </div>
+  </div>
       <div class="mask">
         <div class="d-flex justify-content-center">
           <div class="text-white">
@@ -65,9 +76,9 @@ $testimonials = get_posts(array(
             <div class="be-bg-brown pt-2 pb-2 mask-titulo2">Nueva Coleccion</div>
           </div>
         </div>
-
       </div>
-    </div>
+
+</div>
 
  <!--CARRUSEL-->
   <div class="container-fluid p-0 pt-5">
@@ -319,7 +330,7 @@ $testimonials = get_posts(array(
 
     <!--NEWSLETTER-->
 
-    <div class="instagram mt-5 pt-5 pb-5">
+    <!-- <div class="instagram mt-5 pt-5 pb-5">
 
       <div class="row justify-content-center align-items-center pt-5 pb-5">
 
@@ -337,14 +348,14 @@ $testimonials = get_posts(array(
 
       </div>
 
-    </div>
+    </div> -->
 
     <!--Info de contacto-->
     <div class="bg-gris mt-5 p-4 pt-5 pb-5 p-md-5">
       <div class="row justify-content-center">
-        <div class="col-10 col-md-6 mt-0 mt-md-4">
+        <div class="col-10 col-lg-6 mt-0 mt-md-4">
           
-          <div class="b-titulo1 text-center mt-1 mt-md-5">INFO DE CONTACTO</div>
+          <div class="b-titulo1 text-center mt-1 mt-lg-5">INFO DE CONTACTO</div>
 
           <p class="mt-4 mb-4"><strong>Sucursal Plaza Caracol</strong><br>Av. Francisco Medina Ascencio, Las Glorias, 48333 Puerto Vallarta, Jal.</p>
 
@@ -357,7 +368,7 @@ $testimonials = get_posts(array(
         </div>
 
         <!--formulario de contacto-->
-        <div class="col-11 col-md-6">
+        <div class="col-11 col-lg-6">
 
           <div class="b-titulo1 text-center mt-4 mt-lg-1">CONTACTO</div>
 

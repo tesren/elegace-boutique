@@ -54,6 +54,22 @@ h1{
     margin: 0;
 }
 
+.shadow-5 {
+    box-shadow: 0 3px 5px -1px #0003, 0 5px 8px #00000024, 0 1px 14px #0000001f;
+}
+/*Front page*/
+#carouselExampleSlidesOnly .mask{
+    position: absolute;
+    top:35%;
+    width: 100%;
+}
+
+#carouselExampleSlidesOnly img{
+    height: 90vh;
+    object-fit: cover;
+    object-position: top;
+}
+
 /*single page*/
 
 .form-comentarios label{
@@ -395,6 +411,7 @@ h1{
 /*Search form*/
 #searchform{
     width: 150px;
+    box-shadow: 0 3px 5px -1px #0003, 0 5px 8px #00000024, 0 1px 14px #0000001f;
 }
 
 
@@ -414,6 +431,26 @@ h1{
 
     /*Search form*/
     #searchform{
+        width: 100%;
+    }
+
+    .cardbox img{
+        height: 40vh;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+
+    /*Search form*/
+    #searchform{
+        width: 100%;
+    }
+
+    .cardbox img{
+        height: 30vh;
+        object-fit: cover;
         width: 100%;
     }
 }

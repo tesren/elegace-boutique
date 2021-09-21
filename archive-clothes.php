@@ -24,9 +24,9 @@
                     </div>
                     <div class="detail-box">
                         <div class="type">
-                            <a href="#"><?php echo get_the_title(); ?></a>
+                            <a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
                         </div>
-                        <a href="#" class="price">$<?php echo number_format(rwmb_meta('price')); ?></a>
+                        <a href="<?php echo get_the_permalink(); ?>" class="price">$<?php echo number_format(rwmb_meta('price')); ?></a>
                     </div>
                 </div>		
             </div>
