@@ -9,7 +9,7 @@
             <h1 class="text-center my-5">Resultados de la busqueda </h1>
             <?php while( have_posts()):  the_post();?>
 
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
                 <div class="box">
                     <div class="slide-img">
                     <?php $sImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), get_the_ID() );?>

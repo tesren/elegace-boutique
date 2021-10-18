@@ -1,7 +1,26 @@
 <?php get_header();?>
 
+    <?php
+        $args = array(
+            'post_type' => 'clothes',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+                array(
+                    'key' => 'inventory',
+                    'type' => 'NUMERIC',
+                    'value' => 0,
+                    'compare' => '>'
+                ),
+            ),
+
+        );
+
+        $query = new WP_Query($args);
+        
+    ?>
+
        
-    <?php if( have_posts() ): 
+    <?php if($query -> have_posts() ): 
             
             $i = 1;
             ?>
@@ -11,9 +30,9 @@
         </div>
 
         <div class="row justify-content-evenly">
-            <?php while( have_posts()):  the_post();?>
+            <?php while($query -> have_posts()): $query -> the_post();?>
 
-            <div class="col-md-3">
+            <div class="col-md-6 col-lg-3">
                 <div class="box">
                     <div class="slide-img">
                     <?php $sImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), get_the_ID() );?>

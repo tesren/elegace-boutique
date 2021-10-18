@@ -57,6 +57,11 @@ h1{
 .shadow-5 {
     box-shadow: 0 3px 5px -1px #0003, 0 5px 8px #00000024, 0 1px 14px #0000001f;
 }
+
+#logo-header{
+    width: 4rem;
+}
+
 /*Front page*/
 #carouselExampleSlidesOnly .mask{
     position: absolute;
@@ -409,9 +414,27 @@ h1{
 }
 
 /*Search form*/
-#searchform{
-    width: 150px;
-    box-shadow: 0 3px 5px -1px #0003, 0 5px 8px #00000024, 0 1px 14px #0000001f;
+
+
+/*FOOTER*/
+.fill-brown{
+    color: #937b6f;
+}
+
+.btn-search{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    padding: 2px;
+    background-color: #937b6f;
+    font-size: 23px;
+    color: #fff !important;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 37px;
+    border-radius: 50%;
+    z-index: 100;
 }
 
 
@@ -421,11 +444,7 @@ h1{
         margin: 0px;
     }
   }
-  
-/*FOOTER*/
-.fill-brown{
-    color: #937b6f;
-}
+
 
 @media (max-width: 768px){
 
@@ -438,6 +457,10 @@ h1{
         height: 40vh;
         object-fit: cover;
         width: 100%;
+    }
+
+    #logo-header{
+        width: 3.5rem;
     }
 }
 

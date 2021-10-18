@@ -1,4 +1,27 @@
  
+        <!--boton de busqueda-->
+        <button title="Buscar" type="button" class="btn btn-search shadow-5" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fas fa-search"></i>
+        </button>
+
+         <!--Search Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-2" id="searchModalLabel">Busqueda</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <?php get_search_form( ); ?>
+                    </div>
+
+                    </div>
+                </div>
+        </div><!-- End Modal -->
+
         <footer class="text-center bg-light">
             <img style="height: 5rem;" src="<?php echo get_template_directory_uri() .'/assets/images/logo_boutique.svg';?>" class="mt-4 img-fluid" alt="logo">
             <!-- Grid container -->

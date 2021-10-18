@@ -8,7 +8,12 @@ $clothes = get_posts(array(
           'key' => 'featured_clothes',
           'compare' => '=',
           'value' => 1,
-      )
+      ),
+      array(
+        'key' => 'inventory',
+        'compare' => '>',
+        'value' => 0,
+    ),
   ),
 ));
 $bikinis = get_posts(array(
@@ -19,7 +24,12 @@ $bikinis = get_posts(array(
           'key' => 'featured_bikini',
           'compare' => '=',
           'value' => 1,
-      )
+      ),
+      array(
+        'key' => 'inventory',
+        'compare' => '>',
+        'value' => 0,
+    )
   ),
 ));
 $accesories = get_posts(array(
@@ -30,7 +40,12 @@ $accesories = get_posts(array(
           'key' => 'featured_accessory',
           'compare' => '=',
           'value' => 1,
-      )
+      ),
+      array(
+        'key' => 'inventory',
+        'compare' => '>',
+        'value' => 0,
+    ),
   ),
 ));
 $shoes = get_posts(array(
@@ -41,7 +56,12 @@ $shoes = get_posts(array(
           'key' => 'featured_shoes',
           'compare' => '=',
           'value' => 1,
-      )
+      ),
+      array(
+        'key' => 'inventory',
+        'compare' => '>',
+        'value' => 0,
+    ),
   ),
 ));
 

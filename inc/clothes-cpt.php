@@ -111,6 +111,14 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'desc' => 'Especifique el color del artículo',
             ],
             [
+                'name' => 'Inventario',
+                'id'   => 'inventory',
+                'desc' => 'Ingrese la cantidad de prendas en existencia, cuando sea 0, el artículo no se mostrará en el sitio web',
+                'type' => 'number',
+                'std' => '1',
+                'required' => true
+            ],
+            [
                 'name'    => 'Envíos',
                 'id'      => 'delivery',
                 'type'    => 'checkbox_list',

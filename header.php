@@ -22,10 +22,14 @@
     
     <body <?php body_class();?>>
 
-    <header>
+  <header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand ms-3" href="<?php echo get_home_url(); ?>"><img style="width: 5rem;" src="<?php echo get_template_directory_uri() .'/assets/images/logo_boutique.svg';?>" class="container-fluid" alt="logo"></a>
+
+      <a class="navbar-brand ms-3" href="<?php echo get_home_url(); ?>">
+        <img src="<?php echo get_template_directory_uri() .'/assets/images/logo_boutique.svg';?>" id="logo-header" alt="logo">
+      </a>
+
       <button class="navbar-toggler me-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +39,7 @@
                           'theme_location'    => 'primary',
                           'depth'             => 2,
                           'container'         => 'div',
-                          'container_class'   => 'collapse navbar-collapse justify-content-end p-5 pt-0 pb-0',
+                          'container_class'   => 'collapse navbar-collapse justify-content-end pe-4 pe-lg-5 text-end',
                           'container_id'      => 'navbarSupportedContent',
                           'menu_class'        => 'navbar-nav ms-auto',
                           'menu_id'           => 'boutique_navbar',
@@ -43,11 +47,10 @@
                           'walker'            => new WP_Bootstrap_Navwalker(),
                       ) );
                       ?>
-      <div class="d-none d-lg-block"><?php get_search_form(); ?></div>
       
     </nav>
 
-    </header>
+  </header>
 
 
     
