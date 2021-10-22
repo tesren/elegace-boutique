@@ -1,74 +1,75 @@
 <?php get_header();
 
-$clothes = get_posts(array(
-  'post_type' => 'clothes',
-  'numberposts' => -1,
-  'meta_query'=> array(
-      array(
-          'key' => 'featured_clothes',
-          'compare' => '=',
-          'value' => 1,
+  $clothes = get_posts(array(
+    'post_type' => 'clothes',
+    'numberposts' => -1,
+    'meta_query'=> array(
+        array(
+            'key' => 'featured_clothes',
+            'compare' => '=',
+            'value' => 1,
+        ),
+        array(
+          'key' => 'inventory',
+          'compare' => '>',
+          'value' => 0,
       ),
-      array(
-        'key' => 'inventory',
-        'compare' => '>',
-        'value' => 0,
     ),
-  ),
-));
-$bikinis = get_posts(array(
-  'post_type' => 'bikinis',
-  'numberposts' => -1,
-  'meta_query'=> array(
-      array(
-          'key' => 'featured_bikini',
-          'compare' => '=',
-          'value' => 1,
-      ),
-      array(
-        'key' => 'inventory',
-        'compare' => '>',
-        'value' => 0,
-    )
-  ),
-));
-$accesories = get_posts(array(
-  'post_type' => 'accessories',
-  'numberposts' => -1,
-  'meta_query'=> array(
-      array(
-          'key' => 'featured_accessory',
-          'compare' => '=',
-          'value' => 1,
-      ),
-      array(
-        'key' => 'inventory',
-        'compare' => '>',
-        'value' => 0,
+  ));
+  $bikinis = get_posts(array(
+    'post_type' => 'bikinis',
+    'numberposts' => -1,
+    'meta_query'=> array(
+        array(
+            'key' => 'featured_bikini',
+            'compare' => '=',
+            'value' => 1,
+        ),
+        array(
+          'key' => 'inventory',
+          'compare' => '>',
+          'value' => 0,
+      )
     ),
-  ),
-));
-$shoes = get_posts(array(
-  'post_type' => 'shoes',
-  'numberposts' => -1,
-  'meta_query'=> array(
-      array(
-          'key' => 'featured_shoes',
-          'compare' => '=',
-          'value' => 1,
+  ));
+  $accesories = get_posts(array(
+    'post_type' => 'accessories',
+    'numberposts' => -1,
+    'meta_query'=> array(
+        array(
+            'key' => 'featured_accessory',
+            'compare' => '=',
+            'value' => 1,
+        ),
+        array(
+          'key' => 'inventory',
+          'compare' => '>',
+          'value' => 0,
       ),
-      array(
-        'key' => 'inventory',
-        'compare' => '>',
-        'value' => 0,
     ),
-  ),
-));
+  ));
+  $shoes = get_posts(array(
+    'post_type' => 'shoes',
+    'numberposts' => -1,
+    'meta_query'=> array(
+        array(
+            'key' => 'featured_shoes',
+            'compare' => '=',
+            'value' => 1,
+        ),
+        array(
+          'key' => 'inventory',
+          'compare' => '>',
+          'value' => 0,
+      ),
+    ),
+  ));
 
-$testimonials = get_posts(array(
-  'post_type' => 'testimonials',
-  'numberposts' => -1,
-));?>
+  $testimonials = get_posts(array(
+    'post_type' => 'testimonials',
+    'numberposts' => -1,
+  ));
+?>
 
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -78,10 +79,10 @@ $testimonials = get_posts(array(
       <img src="<?php echo get_template_directory_uri().'/assets/images/cover01.jpeg';?>" class="d-block w-100" alt="landing">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo get_template_directory_uri().'/assets/images/cover-2.jpg';?>" class="d-block w-100" alt="landing 2">
+      <img src="<?php echo get_template_directory_uri().'/assets/images/cover-2.webp';?>" class="d-block w-100" alt="landing 2" loading="lazy">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo get_template_directory_uri().'/assets/images/cover-3.jpg';?>" class="d-block w-100" alt="landing 2">
+      <img src="<?php echo get_template_directory_uri().'/assets/images/cover-3.webp';?>" class="d-block w-100" alt="landing 2" loading="lazy">
     </div>
   </div>
       <div class="mask">
@@ -118,7 +119,7 @@ $testimonials = get_posts(array(
               <div class="box">
                 <div class="slide-img">
                   <?php $cImages = rwmb_meta('article_gallery', array('size' => 'large', 'limit' => '1' ), $cloth->ID);?>
-                    <img alt="<?php echo $cImages[0]['title'] ?>" src="<?php echo $cImages[0]['url']; ?>" loading="lazy" class="img-fluid">
+                    <img alt="<?php echo $cImages[0]['title'] ?>" src="<?php echo $cImages[0]['url']; ?>" loading="lazy" class="img-fluid" >
                     <?php $fecha_alta = get_the_date('Y-m-d H:i:s');
                     //if($fecha_alta):?>
                     <!-- <span class="new-tag px-2">Nuevo</span> -->
@@ -234,7 +235,7 @@ $testimonials = get_posts(array(
         <div class="col-md-4 p-3 p-lg-5">
           <div class="cardbox">
             <a href="<?php echo get_home_url(); ?>/accessories">
-              <img src="<?php echo get_template_directory_uri() .'/assets/images/bolso.jpg';?>" class="img-fluid img-cat" loading="lazy" alt="">
+              <img src="<?php echo get_template_directory_uri() .'/assets/images/bolso.webp';?>" class="img-fluid img-cat" loading="lazy" alt="">
               <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Accesorios</div></div>
             </a>
           </div>
@@ -243,7 +244,7 @@ $testimonials = get_posts(array(
         <div class="col-md-4 p-3 p-lg-5">
           <div class="cardbox">
             <a href="<?php echo get_home_url(); ?>/clothes">
-              <img src="<?php echo get_template_directory_uri() .'/assets/images/ropa.jpeg';?>" loading="lazy" class="img-fluid img-cat" alt="">
+              <img src="<?php echo get_template_directory_uri() .'/assets/images/ropa.webp';?>" loading="lazy" class="img-fluid img-cat" alt="">
               <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Ropa</div></div>
             </a>
           </div>
@@ -252,7 +253,7 @@ $testimonials = get_posts(array(
         <div class="col-md-4 p-3 p-lg-5">
           <div class="cardbox">
             <a href="<?php echo get_home_url(); ?>/shoes">
-              <img src="<?php echo get_template_directory_uri() .'/assets/images/zapatos.jpg';?>" loading="lazy" class="img-fluid img-cat" alt="">
+              <img src="<?php echo get_template_directory_uri() .'/assets/images/zapatos.webp';?>" loading="lazy" class="img-fluid img-cat" alt="">
               <div class="be-bg-brown p-2"><div class="cardbox-titulo text-center">Zapatos</div></div>
             </a>
           </div>
@@ -263,7 +264,7 @@ $testimonials = get_posts(array(
 
     <!--INSTAGRAM-->
 
-    <div class="instagram mb-5">
+    <div class="instagram mb-5" style="background-image: url('<?php echo get_template_directory_uri();?>/assets/images/cover1.jpg');">
 
       <div class="row">
         <div class="text-center instagram-tiutlo mt-5">VISITA NUESTRO INSTAGRAM</div>
@@ -291,7 +292,7 @@ $testimonials = get_posts(array(
     </div>
 
     <div style="height: 50vh;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.4256034943534!2d-105.23363847077192!3d20.6409831991381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145ee10f1ee11%3A0x3aaafc9b1a5fcaaa!2sBoutique%20Elegance%20Plaza%20Caracol!5e0!3m2!1ses-419!2smx!4v1628281295228!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe title="Ubicacion sucursal Plaza Caracol" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.4256034943534!2d-105.23363847077192!3d20.6409831991381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145ee10f1ee11%3A0x3aaafc9b1a5fcaaa!2sBoutique%20Elegance%20Plaza%20Caracol!5e0!3m2!1ses-419!2smx!4v1628281295228!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <div class="mt-5 mb-2">
@@ -304,7 +305,7 @@ $testimonials = get_posts(array(
     </div>
 
     <div style="height: 50vh;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.4388397668572!2d-105.22156489153235!3d20.63882622920495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145a8a62da707%3A0x7e53903753494db2!2sParota%20Center!5e0!3m2!1ses-419!2smx!4v1628532551345!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe title="Ubicacion sucursal Plaza Parota" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.4388397668572!2d-105.22156489153235!3d20.63882622920495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145a8a62da707%3A0x7e53903753494db2!2sParota%20Center!5e0!3m2!1ses-419!2smx!4v1628532551345!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
 
@@ -324,8 +325,8 @@ $testimonials = get_posts(array(
                 <h2 class="text-center">TESTIMONIOS</h2>
                 <div class="px-5 pt-3 pb-3 text-center"><?php echo get_the_content(null,false, $testimonial->ID);?></div>
                 <div class="d-flex justify-content-center user"> 
-                  <?php $testImages = rwmb_meta('test_profile_pic', array('size' => 'large', 'limit' => '1' ), $testimonial->ID); ?>
-                  <img style="border-radius:50%;" src="<?php echo $testImages[0]['url'] ?>" alt="<?php echo $testImages[0]['title'] ?>">
+                  <?php $testImages = rwmb_meta('test_profile_pic', array('size' => 'medium', 'limit' => '1' ), $testimonial->ID); ?>
+                  <img style="border-radius:50%;" src="<?php echo $testImages[0]['url'] ?>" alt="<?php echo $testImages[0]['title'] ?>" loading="lazy">
                 </div>
                 <h2 class="text-center"><?php echo get_the_title($testimonial->ID);?></h2>
                 <div class="b-titulo2 text-center">Cliente</div>

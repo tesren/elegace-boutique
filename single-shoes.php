@@ -100,16 +100,16 @@
 
                     <aside class="social-media">
                     
-                        <a href="<?php echo $facebook ?>" class="s-item facebook" target="_blank">
+                        <a href="<?php echo $facebook ?>" class="s-item facebook" target="_blank" rel="noopener">
                             <span class="fab fa-facebook-f"></span>
                         </a>
                         
-                        <a href="<?php echo $twitter ?>" class="s-item twitter" target="_blank">
+                        <a href="<?php echo $twitter ?>" class="s-item twitter" target="_blank" rel="noopener">
                             <span class="fab fa-twitter"></span>
                         </a>
                         
 
-                        <a href="<?php echo $whatsapp ?>" class="s-item gplus" target="_blank" data-action="share/whatsapp/share">
+                        <a href="<?php echo $whatsapp ?>" class="s-item gplus" target="_blank" rel="noopener" data-action="share/whatsapp/share">
                             <span class="fab fa-whatsapp"></span>
                         </a>
 

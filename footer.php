@@ -35,7 +35,7 @@
                     href="https://www.facebook.com/boutique.elegance.mx"
                     role="button"
                     data-mdb-ripple-color="dark"
-                    target="_blank"
+                    target="_blank" rel="noopener"
                     ><i class="fab fa-facebook-f fill-brown"></i
                 ></a>
                 <!-- Instagram -->
@@ -44,7 +44,7 @@
                     href="https://www.instagram.com/eleganceboutique.mx/"
                     role="button"
                     data-mdb-ripple-color="dark"
-                    target="_blank"
+                    target="_blank" rel="noopener"
                     ><i class="fab fa-instagram fill-brown"></i
                 ></a>
                 <!-- Whastapp -->
@@ -53,7 +53,7 @@
                     href="#"
                     role="button"
                     data-mdb-ripple-color="dark"
-                    target="_blank"
+                    target="_blank" rel="noopener"
                     ><i class="fab fa-whatsapp fill-brown"></i>
                 </a>
                 </section>
@@ -63,16 +63,10 @@
 
             <!-- Copyright -->
             <div class="text-center text-dark p-3">
-                Todos los derechos reservados ©2021 |
-                <a class="text-dark" href=""> Boutique Elegance</a>
+                Todos los derechos reservados ©2021 | Boutique Elegance
             </div>
             <!-- Copyright -->
         </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-        <!--font awesome-->
-        <script src="https://kit.fontawesome.com/164e915f72.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
         <?php wp_footer();  ?>
     </body>
 </html>

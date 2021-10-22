@@ -70,7 +70,7 @@
                             <div class="fs-5 mt-4"><?php echo the_content(); ?></div>
                             
                             <?php $text = " Hola me interesa este artículo"; ?>
-                            <a href="https://wa.me/523225555555?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank">Me Interesa</a>
+                            <a href="https://wa.me/523225555555?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank" rel="noopener">Me Interesa</a>
                         </div>
 
 
@@ -92,16 +92,16 @@
 
                     <aside class="social-media">
                     
-                        <a href="<?php echo $facebook ?>" class="s-item facebook" target="_blank">
+                        <a href="<?php echo $facebook ?>" class="s-item facebook" target="_blank" rel="noopener">
                             <span class="fab fa-facebook-f"></span>
                         </a>
                         
-                        <a href="<?php echo $twitter ?>" class="s-item twitter" target="_blank">
+                        <a href="<?php echo $twitter ?>" class="s-item twitter" target="_blank" rel="noopener">
                             <span class="fab fa-twitter"></span>
                         </a>
                         
 
-                        <a href="<?php echo $whatsapp ?>" class="s-item gplus" target="_blank" data-action="share/whatsapp/share">
+                        <a href="<?php echo $whatsapp ?>" class="s-item gplus" target="_blank" rel="noopener" data-action="share/whatsapp/share">
                             <span class="fab fa-whatsapp"></span>
                         </a>
 

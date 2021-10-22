@@ -1,4 +1,4 @@
-function initMap() {
+/* function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 16,
       center: { lat: 20.6407228, lng: -105.2284675 },
@@ -29,9 +29,10 @@ function initMap() {
 
     var rellax = new Rellax('.rellax', {
         wrapper: '.parallax-os-container'
-    });
+    }); */
     
 
-/**Contact form */
+/*Contact form */
 $('.wpcf7 textarea').attr('rows', 5);
+
 
