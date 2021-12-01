@@ -310,45 +310,49 @@
 
 
     <!--TESTIMONOIOS-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    
-      <div class="carousel-inner">
+    <?php if(!empty($testimonials)): ?>
 
-      <?php if(!empty($testimonials)): 
-        foreach($testimonials as $testimonial): ?>
+      <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
+      
+        <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <div class="mt-5">
-            <div class="row">
-              <div class="promociones">
-                <div class="b-titulo2 text-center">Clientes</div>
-                <h2 class="text-center">TESTIMONIOS</h2>
-                <div class="px-5 pt-3 pb-3 text-center"><?php echo get_the_content(null,false, $testimonial->ID);?></div>
-                <div class="d-flex justify-content-center user"> 
-                  <?php $testImages = rwmb_meta('test_profile_pic', array('size' => 'medium', 'limit' => '1' ), $testimonial->ID); ?>
-                  <img style="border-radius:50%;" src="<?php echo $testImages[0]['url'] ?>" alt="<?php echo $testImages[0]['title'] ?>" loading="lazy">
+        
+          <?php $j = 0;
+            foreach($testimonials as $testimonial): ?>
+
+            <div class="carousel-item <?php if($j==0){echo 'active';} ?>">
+              <div class="mt-5">
+                <div class="row">
+                  <div class="promociones">
+                    <div class="b-titulo2 text-center">Clientes</div>
+                    <h2 class="text-center">TESTIMONIOS</h2>
+                    <div class="px-5 pt-3 pb-3 text-center"><?php echo get_the_content(null,false, $testimonial->ID);?></div>
+                    <div class="d-flex justify-content-center user"> 
+                      <?php $testImages = rwmb_meta('test_profile_pic', array('size' => 'medium', 'limit' => '1' ), $testimonial->ID); ?>
+                      <img style="border-radius:50%;" src="<?php echo $testImages[0]['url'] ?>" alt="<?php echo $testImages[0]['title'] ?>" loading="lazy">
+                    </div>
+                    <h2 class="text-center"><?php echo get_the_title($testimonial->ID);?></h2>
+                    <div class="b-titulo2 text-center">Cliente</div>
+                  </div>
                 </div>
-                <h2 class="text-center"><?php echo get_the_title($testimonial->ID);?></h2>
-                <div class="b-titulo2 text-center">Cliente</div>
               </div>
             </div>
-          </div>
+
+          <?php $j++;
+            endforeach; ?>
+        
         </div>
-
-      <?php endforeach;
-      endif; ?>
-       
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
 
+    <?php endif; ?>
     <!--NEWSLETTER-->
 
     <!-- <div class="instagram mt-5 pt-5 pb-5">
