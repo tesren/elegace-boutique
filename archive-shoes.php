@@ -3,7 +3,8 @@
     <?php   
         $args = array(
             'post_type' => 'shoes',
-            'posts_per_page' => -1,
+            'posts_per_page' => 20,
+            'paged' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
             'meta_query' => array(
                 array(
                     'key' => 'inventory',

@@ -388,12 +388,12 @@
 
           <div class="d-flex align-items-center pb-3 margin-top-2"><i class="fas fa-phone mr-1 fa-2x"></i><p>322 2255 531</p></div>
           <div class="d-flex align-items-center pb-3"><i class="fas fa-phone mr-1 fa-2x"></i><p>322 1165 360</p></div>
-          <div class="d-flex align-items-center pb-3"><i class="fas fa-envelope mr-1 fa-2x"></i><p>Info.boutique@gmail.com</p></div>
+          <div class="d-flex align-items-center pb-3"><i class="fas fa-envelope mr-1 fa-2x"></i><p>ventas@eleganceboutiquemx.com</p></div>
           
         </div>
 
         <!--formulario de contacto-->
-        <div class="col-11 col-lg-6">
+        <div class="col-11 col-lg-6" id="boutiqueContactForm">
 
           <div class="b-titulo1 text-center mt-4 mt-lg-1">CONTACTO</div>
 

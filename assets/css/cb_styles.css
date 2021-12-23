@@ -75,6 +75,23 @@ h1{
     object-position: top;
 }
 
+/*Archive pages*/
+.pagination{
+    justify-content: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.pagination .page-numbers{
+    color: #937b6f;
+    text-decoration: underline;
+}
+
+.pagination .current{
+    color: black !important;
+    text-decoration: none;
+}
+
 /*single page*/
 
 .form-comentarios label{
