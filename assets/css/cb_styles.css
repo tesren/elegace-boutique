@@ -9,7 +9,6 @@ body{
 .nav-item{
     color: #2e2e2e;
     font-weight: bolder;
-    margin-left: 3rem;
 }
 .nav-link{
     text-transform: uppercase;
@@ -168,6 +167,13 @@ h1{
 .be-bg-brown{
     background-color:#937b6f;
 }
+
+.bg-red{
+    background-color: darkred;
+    border-radius: 0;
+    font-weight: 300;
+}
+
 .text-white .be-bg-brown{
     background-color:#937b6f;
     padding-left: 2rem;

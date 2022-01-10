@@ -131,7 +131,20 @@
                     <div class="type">
                         <a href="<?php echo get_the_permalink($cloth->ID); ?>"><?php echo get_the_title($cloth->ID); ?></a>
                     </div>
-                    <a href="<?php echo get_the_permalink($cloth->ID); ?>" class="price">$<?php echo number_format($cloth->price); ?></a>
+                    <a href="<?php echo get_the_permalink($cloth->ID); ?>" class="price link-dark">
+                      <?php 
+                        $discountedPrice = $shoe->discounted_price;
+                      ?>
+
+                      <?php if($discountedPrice): ?>
+                        <span class="text-decoration-line-through d-block">$<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                        <span class="">$<?php echo number_format($discountedPrice); ?></span>
+                        <span class="p-1 badge bg-red">Oferta</span>
+                      <?php else: ?>
+                        $<?php echo number_format($cloth->price); ?>
+                      <?php endif; ?>
+                    </a>
                 </div>
               </div>		
             </li>
@@ -153,7 +166,20 @@
                     <div class="type">
                         <a href="<?php echo get_the_permalink($bikini->ID); ?>"><?php echo get_the_title($bikini->ID); ?></a>
                     </div>
-                    <a href="<?php echo get_the_permalink($bikini->ID); ?>" class="price">$<?php echo number_format($bikini->price); ?></a>
+                    <a href="<?php echo get_the_permalink($bikini->ID); ?>" class="price">
+                      <?php 
+                        $discountedPrice = $bikini->discounted_price;
+                      ?>
+
+                      <?php if($discountedPrice): ?>
+                        <span class="text-decoration-line-through d-block">$<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                        <span class="">$<?php echo number_format($discountedPrice); ?></span>
+                        <span class="p-1 badge bg-red">Oferta</span>
+                      <?php else: ?>
+                        $<?php echo number_format($bikini->price); ?>
+                      <?php endif; ?>
+                    </a>
                 </div>
               </div>		
             </li>
@@ -175,7 +201,20 @@
                     <div class="type">
                         <a href="<?php echo get_the_permalink($accesory->ID); ?>"><?php echo get_the_title($accesory->ID); ?></a>
                     </div>
-                    <a href="<?php echo get_the_permalink($accesory->ID); ?>" class="price">$<?php echo number_format($accesory->price); ?></a>
+                    <a href="<?php echo get_the_permalink($accesory->ID); ?>" class="price">
+                      <?php 
+                        $discountedPrice = $accesory->discounted_price;
+                      ?>
+
+                      <?php if($discountedPrice): ?>
+                        <span class="text-decoration-line-through d-block">$<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                        <span class="">$<?php echo number_format($discountedPrice); ?></span>
+                        <span class="p-1 badge bg-red">Oferta</span>
+                      <?php else: ?>
+                        $<?php echo number_format($accesory->price); ?>
+                      <?php endif; ?>
+                    </a>
                 </div>
               </div>		
             </li>
@@ -197,7 +236,20 @@
                     <div class="type">
                         <a href="<?php echo get_the_permalink($shoe->ID);?>"><?php echo get_the_title($shoe->ID); ?></a>
                     </div>
-                    <a href="<?php echo get_the_permalink($shoe->ID);?>" class="price">$<?php echo number_format($shoe->price); ?></a>
+                    <a href="<?php echo get_the_permalink($shoe->ID);?>" class="price">
+                      <?php 
+                        $discountedPrice = $shoe->discounted_price;
+                      ?>
+
+                      <?php if($discountedPrice): ?>
+                        <span class="text-decoration-line-through d-block">$<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                        <span class="">$<?php echo number_format($discountedPrice); ?></span>
+                        <span class="p-1 badge bg-red">Oferta</span>
+                      <?php else: ?>
+                        $<?php echo number_format($shoe->price); ?>
+                      <?php endif; ?>
+                    </a>
                 </div>
               </div>		
             </li>
@@ -376,15 +428,15 @@
     </div> -->
 
     <!--Info de contacto-->
-    <div class="bg-gris mt-5 p-4 pt-5 pb-5 p-md-5">
+    <div class="bg-gris mt-5 p-0 pt-5 pb-5 p-md-5">
       <div class="row justify-content-center">
-        <div class="col-10 col-lg-6 mt-0 mt-md-4">
+        <div class="col-12 col-lg-6 mt-0 mt-md-4">
           
           <div class="b-titulo1 text-center mt-1 mt-lg-5">INFO DE CONTACTO</div>
 
           <p class="mt-4 mb-4"><strong>Sucursal Plaza Caracol</strong><br>Av. Francisco Medina Ascencio, Las Glorias, 48333 Puerto Vallarta, Jal.</p>
 
-          <p><strong>Sucursal Plaza Parota</strong><br>Av. Francisco Medina Ascencio, Las Glorias, 48333 Puerto Vallarta, Jal.</p>
+          <p><strong>Sucursal Plaza Parota</strong><br>Av. Francisco Villa 1010, Jardines de Las Gaviotas, 48328 Puerto Vallarta, Jal.</p>
 
           <div class="d-flex align-items-center pb-3 margin-top-2"><i class="fas fa-phone mr-1 fa-2x"></i><p>322 2255 531</p></div>
           <div class="d-flex align-items-center pb-3"><i class="fas fa-phone mr-1 fa-2x"></i><p>322 1165 360</p></div>

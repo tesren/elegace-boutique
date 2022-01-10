@@ -40,7 +40,19 @@
 
                         <div class="col-lg-5 px-4 px-lg-3">
                             <h1 class="my-3" style="color:#937b6f;"><?php the_title();?></h1>
-                            <span class="fw-bold fs-4 d-block">MXN $<?php echo number_format(rwmb_meta('price')); ?></span>
+                            <?php 
+                                 
+                                $discountedPrice = rwmb_meta('discounted_price');
+                            ?>
+
+                            <?php if($discountedPrice): ?>
+                                <span class="fw-bold fs-4 d-block text-decoration-line-through">MXN $<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                                <span class="fw-bold fs-4">MXN $<?php echo number_format($discountedPrice); ?></span>
+                                <span class="fs-4 p-2 badge bg-red">Oferta</span>
+                            <?php else: ?>
+                                <span class="fw-bold fs-4 d-block">MXN $<?php echo number_format(rwmb_meta('price')); ?></span>
+                            <?php endif; ?>
 
                             <?php $envios = rwmb_meta('delivery');
                             if(!empty($envios)): ?>
@@ -79,11 +91,18 @@
 
                             <div class="fs-5 mt-4"><?php echo the_content(); ?></div>
                             
-                            <?php $text = " Hola me interesa este artículo"; ?>
-                            <a href="https://wa.me/523223030071?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp me-1"></i>   
-                                Me Interesa
-                            </a>
+                            <?php if(rwmb_meta('inventory') == 0): ?>
+                                <?php $text = " Hola me interesa este artículo"; ?>
+                                <a href="https://wa.me/523223030071?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-secondary disabled mt-4 w-100" target="_blank" rel="noopener">
+                                    Artículo agotado temporalmente
+                                </a>
+                            <?php else: ?>
+                                <?php $text = " Hola me interesa este artículo"; ?>
+                                <a href="https://wa.me/523223030071?text=<?php echo get_the_permalink().$text; ?>" class="btn btn-outline-secondary mt-4 w-100" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp me-1"></i>   
+                                    Me Interesa
+                                </a>
+                            <?php endif; ?>
 
                         </div>
 

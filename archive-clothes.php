@@ -46,7 +46,21 @@
                         <div class="type">
                             <a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
                         </div>
-                        <a href="<?php echo get_the_permalink(); ?>" class="price">$<?php echo number_format(rwmb_meta('price')); ?></a>
+                        <a href="<?php echo get_the_permalink(); ?>" class="price link-dark">
+
+                            <?php 
+                                $discountedPrice = rwmb_meta('discounted_price');
+                            ?>
+
+                            <?php if($discountedPrice): ?>
+                                <span class="text-decoration-line-through d-block">$<?php echo number_format(rwmb_meta('price')); ?></span>
+
+                                <span class="">$<?php echo number_format($discountedPrice); ?></span>
+                                <span class="p-1 badge bg-red">Oferta</span>
+                            <?php else: ?>
+                                $<?php echo number_format(rwmb_meta('price')); ?>
+                            <?php endif; ?>
+                        </a>
                     </div>
                 </div>		
             </div>

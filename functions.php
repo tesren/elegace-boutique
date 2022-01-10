@@ -117,4 +117,15 @@ add_filter( 'clean_url', 'os_async_scripts', 11, 1 );
     }
 
     add_action('admin_head','check_post_type_and_remove_media_buttons');
+
+    function boutique_get_category($postID, $taxonomy){
+        
+        $terms_list = array_reverse(wp_get_post_terms( $postID, $taxonomy ) );
+
+        if ( ! empty( $terms_list ) && ! is_wp_error( $terms_list ) ) {
+            foreach ( $terms_list as $term ) {
+                echo $term->name;
+            }
+        }
+    }
 ?>

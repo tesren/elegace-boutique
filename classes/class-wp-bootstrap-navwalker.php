@@ -184,15 +184,15 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				$atts['data-bs-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';
-				$atts['class']         = 'dropdown-toggle nav-link link-light';
+				$atts['class']         = 'dropdown-toggle nav-link mx-1 mx-lg-4 link-light';
 				$atts['id']            = 'menu-item-dropdown-' . $item->ID;
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 				// Items in dropdowns use .dropdown-item instead of .nav-link.
 				if ( $depth > 0 ) {
-					$atts['class'] = 'dropdown-item px-2 mx-auto';
+					$atts['class'] = 'dropdown-item px-2 mx-auto me-0';
 				} else {
-					$atts['class'] = 'nav-link fs-6';
+					$atts['class'] = 'nav-link mx-1 mx-lg-4 fs-6';
 				}
 			}
 

@@ -52,6 +52,38 @@
 
     add_action('init', 'clothes_custom_post_type');
 
+    function boutique_clothes_custom_taxonomies(){
+
+        //add new taxonomi heirarchical
+        $labels = array(
+            'name' => 'Categorías de Ropa', //Puede ser casas, depas, terrenos
+            'singular_name' => 'Categoría',
+            'search_items' => 'Buscar Categoría',
+            'all_items' => 'Todas las Categorías',
+            'parent_item' => 'Categoría Padre', 
+            'parent_item_colon' => 'Categoría Pafre:',
+            'edit_item' => 'Editar Categoría',
+            'update_item' => 'Cambiar Categoría',
+            'add_new_item' => 'Agregar Nueva Categoría', 
+            'new_item_name' => 'Nueva Categoría',
+            'manu_name' => 'Categorías'
+        );
+
+        $args = array(
+            'hierarchical' => false,
+            'labels' => $labels,
+            'show_in_menu' => true,
+            'show_ui' => true,
+            'show_admin_column' => true, //muestra u oculta la columna en vista admon para filtrar
+            'query_var' => true,
+            'rewrite' => array('slug' => 'category_clothes') //Este parametro saldra en la URL
+        );
+
+        register_taxonomy('category_clothes', 'clothes', $args );
+
+    }
+
+    add_action('init', 'boutique_clothes_custom_taxonomies');
           
 add_filter( 'rwmb_meta_boxes', 'clothes_register_meta_boxes' );
 
@@ -68,13 +100,32 @@ function clothes_register_meta_boxes( $meta_boxes ) {
                 'id'   => 'price',
                 'type' => 'number',
                 'required'=> false,
-            ],  
+            ],
             [
-                'name' => 'Promoción',
+                'name' => 'Precio con Descuento',
+                'id'   => 'discounted_price',
+                'type' => 'number',
+                'placeholder'=> 'Por Favor llene el precio normal antes',
+                'desc' => 'Por Favor llene el precio normal antes',
+                'required'=> false,
+            ],
+            [
+                'name' => 'Artículo destacado',
+                'desc' => 'Los artículos destacados se mostraran en la página de inicio',
                 'id'   => 'featured_clothes',
-                'desc' => 'Las promociones se mostraran en la página de inicio',
                 'type' => 'checkbox',
                 'std'  => 0, // 0 or 1
+            ],
+            [
+                'name'       => 'Categoría',
+                'id'         => 'article_category',
+                'type'       => 'taxonomy',
+
+                // Taxonomy slug.
+                'taxonomy'   => 'category_clothes',
+
+                // How to show taxonomy.
+                'field_type' => 'radio_list',
             ],
             [
                 'name'    => 'Tallas disponibles',
